@@ -88,23 +88,7 @@ function FormComponent(props) {
         </div>
         <button className="submit">Submit</button>
       </form>
-      <hr />
-      <div className="entered-info">
-        <h2>Entered information:</h2>
-        <p>
-          Your name: {props.firstName} {props.lastName}
-        </p>
-        <p>Your age: {props.age}</p>
-        <p>Your gender: {props.gender}</p>
-        <p>Your destination: {props.destination}</p>
-        <p>Your dietary restrictions: </p>
-        <div className="restrictions">
-          <span>**Nuts free : {props.nutsFree ? " Yes" : "No"}</span> <br />
-          <span>**Lactose free : {props.lactoseFree ? " Yes" : "No"}</span>{" "}
-          <br />
-          <span>**Vegan meal : {props.isVegan ? " Yes" : "No"}</span>
-        </div>
-      </div>
+     
     </main>
   );
 }
