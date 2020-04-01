@@ -1,0 +1,32 @@
+import React, { Component } from "react";
+import FormComponent from "./FormComponent";
+
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      firstName: "",
+      lastName: "",
+      age: "",
+      gender: "",
+      email: "",
+      password: "",
+      country: ""
+    };
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(e) {
+    const { value, name, type, checked } = e.target;
+
+    type === "checkbox"
+      ? this.setState({ [name]: checked })
+      : this.setState({ [name]: value });
+  }
+
+  render() {
+    return <FormComponent handleChange={this.handleChange} {...this.state} />;
+  }
+}
+
+export default App;
