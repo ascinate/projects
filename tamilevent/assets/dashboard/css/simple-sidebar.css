@@ -1,0 +1,74 @@
+/*!
+ * Start Bootstrap - Simple Sidebar (https://startbootstrap.com/templates/simple-sidebar)
+ * Copyright 2013-2020 Start Bootstrap
+ * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-simple-sidebar/blob/master/LICENSE)
+ */
+
+ #wrapper {
+    overflow-x: hidden;
+ }
+
+#sidebar-wrapper {
+  overflow:hidden;
+  position:fixed;
+  left:0;
+  top:0;
+  z-index:99;
+  bottom:0;
+  overflow-x:hidden;
+  overflow-y:auto;
+  width:62px;
+  transition:width 0.94s ease-out;
+  
+  
+}
+
+#sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
+}
+
+#sidebar-wrapper .list-group {
+  width: 14rem;
+  /* setup the css transitions */
+  -webkit-transition: width 0.94s ease-out;
+  -moz-transition: width 0.94s ease-out;
+  transition: width 0.94s ease-out;
+}
+
+#page-content-wrapper {
+  min-width: 100vw;
+  position:absolute;
+  top:0;
+  overflow-x:hidden;
+  overflow-y:auto;
+  padding-left:63px;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #sidebar-wrapper{
+	  left: -246px;
+  }
+  #sidebar-wrapper.small{
+	  left:0;
+  }
+}

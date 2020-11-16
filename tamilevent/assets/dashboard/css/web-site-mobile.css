@@ -1,0 +1,599 @@
+@charset "utf-8";
+/* CSS Document */
+
+@media (max-width:1199px){
+
+
+
+
+}
+@media (max-width:1024px){
+/*index*/
+.header-serach .form-control{
+	height:41px;
+	font-size:11px;
+}
+.serach-dash-bn{
+	font-size:11px;
+}
+.new-header .navbar-light .navbar-nav .nav-link{
+	font-size:11px;
+}
+.profile-sec .user-ac-pic{
+	width:30px;
+	height:30px;
+	margin-top:8px;
+}
+.header-serach {
+    width: 44%;
+}
+.profile-sec h5{
+	font-size:13px;
+}
+.header-serach .form-group:first-child{
+	width:43%;
+}
+/*business portfolio page*/
+.btn_upload{
+	left:47%;
+	margin-top:10px;
+}
+.fancybox-caption__body{
+	width:100%;
+}
+/*client-project-2*/
+.ads-pro1 {
+    flex-direction: column;
+	place-items: center;
+}
+.ads-pro1 figcaption {
+    margin-top: 34px;
+    text-align: center;
+}
+.comon-button{
+	font-size:12px;
+}
+.left-div, .right-div {
+    width: 73%;
+}
+
+/*client save items*/
+.item-list-save ul {
+    padding: 10px 22px;
+    place-items: center;
+}
+}
+@media (max-width:992px){
+/*index*/
+.top-ac-settings-d1 .row{
+	flex-direction: column;
+}
+.bottom-sec-part .new-sp-group{
+	width:94%;
+}
+.new-header .navbar-light .navbar-nav .nav-link{
+	font-size:13px;
+}
+.form-sec-account .row{
+	width:100%;
+}
+.header-serach{
+	left:0;
+	width:47%;
+}
+.profile-sec{
+	border-left:0;
+	padding-left:0;
+}
+.new-disable{
+	margin-left:70px;
+}
+.btn_upload{
+	left:47%;
+	margin-top:10px;
+}
+/*business portfoilo page1*/
+.description-d2{
+	margin-top:20px;
+}
+.add-picture-sec .row{
+	flex-direction: column;
+}
+.facncy-box-sec{
+	justify-content: center;
+}
+
+/*client my project 2 page*/
+.new-comon-box3{
+	width:100%;
+}
+.left-width-sec .left-inside-text:first-child{
+	width:100%;
+	flex-direction: column;
+	justify-content: center;
+    place-items: center;
+	text-align:center;
+}
+.ads-pro1{
+	flex-direction: column;
+	justify-content: center;
+    place-items: center;
+}
+.common-projects1 {
+	width:100%;
+	
+}
+.special-div-projects-one{
+	width:100%;
+	overflow:inherit;
+}
+.right-pro-1{
+	flex-direction: column;
+	justify-content: center;
+    place-items: center;
+}
+.left-width-sec {
+    flex-direction: column;
+	justify-content: center;
+    place-items: center;
+	width:100%;
+}
+.right-inside-text{
+	width:100%;
+}
+.right-inside-text .right-div{
+	margin:auto;
+}
+.common-sub-heading{
+	margin-left:0;
+}
+.common-sub-heading{
+	margin-right:0;
+}
+.top-sec-login, 
+.budget-text{
+	flex-direction: column;
+}
+.budget-text a{
+	width:100%;
+}
+
+
+.indie-projects .left-div ul{
+	position:relative;
+	top:0;
+	left:0;
+	transform:none;
+	float:left;
+}
+.indie-projects .right-div ul{
+	position:relative;
+	top:0;
+	left:0;
+	transform:none;
+	float:right;
+}
+.indie-projects .dashbord-area{
+	flex-direction: column;
+}
+/*client save items*/
+.item-list-save ul li:first-child:after {
+    right: -106%;
+}
+.item-list-save ul {
+    flex-direction: column;
+}
+.total-body{
+	padding-left:0;
+	padding-right:0;
+}
+}
+@media (max-width:767px){
+/*header*/
+.header-serach{
+	width:100%;
+	left:0;
+	margin-top:10px;
+}
+.profile-sec{
+	border-left:0;
+}
+.profile-sec{
+	padding-left:0;
+}
+.header-serach .form-group:first-child{
+	width:62%;
+}
+.navbar-nav{
+	flex-direction: row;
+}
+/*body*/
+.new-disable .toggle-switch{
+	margin-left:175px;
+}
+.total-body{
+	padding:0;
+}
+.form-sec-account .row{
+	width:112% !important;
+}
+.form-sec-account .row{
+	width:112% !important;
+}
+.form-sec-account .row .form-control{
+	margin-bottom:20px;
+}
+.form-sec-account{
+	width:80%;
+}
+.bottom-sec-part .new-sp-group{
+	width:100% !important;
+}
+.new-disable{
+	margin-left:0;
+}
+
+/*business portfolio page*/
+.yes {
+	flex-direction: column;
+}
+.btn_upload{
+	position:relative;
+	left:25px;
+}
+.inside-input-sec .row{
+	 flex-direction: column;
+}
+.add-video-bn{
+	width:43%;
+}
+.img-sec-d1{
+	text-align:left;
+}
+.video-link-sec{
+	width:100%;
+	margin-left:28px;
+}
+.facncy-box-sec{
+	flex-direction: column;
+	justify-content: center;
+    place-items: center;
+}
+.profile-one .comon-pro-div{
+	width:300px;
+	height:300px;
+}
+.profile-one .poftfoli-items{
+	width:300px;
+	height:300px;
+}
+
+
+/*client my project 2 page*/
+.new-comon-box3{
+	width:100%;
+}
+.left-width-sec .left-inside-text:first-child{
+	width:100%;
+	flex-direction: column;
+	justify-content: center;
+    place-items: center;
+	text-align:center;
+}
+.ads-pro1{
+	flex-direction: column;
+	justify-content: center;
+    place-items: center;
+}
+.common-projects1 {
+    flex-direction: column;
+	width:100%;
+	
+}
+.special-div-projects-one{
+	width:100%;
+	flex-direction: column;
+}
+.right-pro-1{
+	flex-direction: column;
+	justify-content: center;
+    place-items: center;
+}
+.left-width-sec {
+    flex-direction: column;
+	justify-content: center;
+    place-items: center;
+	width:100%;
+}
+.right-inside-text{
+	width:100%;
+}
+.right-inside-text .right-div{
+	margin:auto;
+}
+.common-sub-heading{
+	margin-left:0;
+}
+.common-sub-heading{
+	margin-right:0;
+}
+.top-sec-login, 
+.budget-text{
+	flex-direction: column;
+}
+.budget-text a{
+	width:100%;
+}
+
+.inside-sec-div .table td, .table th{
+	padding-left:10px !important;
+}
+.inside-sec-div .table td{
+	font-size:12px;
+}
+.new-after{
+	right:37px;
+}
+.fild-box-d1{
+	width:100%;
+}
+/*business my projects page*/
+.indie-projects .dashbord-area{
+	    flex-direction: column;
+}
+.indie-projects .left-div ul{
+	position:relative;
+	left:0;
+	transform:none;
+}
+.left-div, .right-div{
+	width:100%;
+}
+.client-details{
+	flex-direction: column;
+	place-items: center;
+	text-align:center;
+}
+.clients-buttons {
+    flex-direction: column-reverse;
+}
+.indie-projects .right-div ul{
+	position:relative;
+	transform:none;
+}
+
+/*edit my event*/
+.new-businees-account-edit-apge .edit-myprofile{
+	width:100%;
+}
+.check-fild-option h5{
+	font-size: 16px;
+	font-weight:600;
+}
+.pic-upload-sec h3{
+	margin-top:0;
+}
+.pic-upload-sec{
+	padding:20px 0;
+}
+/*client save items*/
+.item-list-save ul li:first-child:after {
+    right: -106%;
+}
+
+}
+@media (max-width:668px){
+  .form-sec-account .row {
+    width: 107% !important;
+  }
+/*client save items*/
+.item-list-save ul li:first-child:after {
+    right: -106%;
+}
+
+}
+@media (max-width:480px){
+
+/*header*/
+.navbar-nav {
+    flex-direction: column;
+}
+.new-header .navbar-light .navbar-nav .nav-link{
+	font-size:13px;
+}
+.right-menu .navbar-nav .nav-item{
+	margin-left:0;
+}
+#page-content-wrapper{
+	padding-left:0;
+}
+.toogle-bn{
+	top: 64px;
+    left: 0;
+}
+.header-serach{
+	flex-direction: column;
+	left:0;
+	width:100%;
+	border-radius:0;
+	top:5px;
+}
+.ds-new{
+	left:265px !important; 
+}
+.header-serach .form-group{
+	display:inline-block;
+	border-bottom:solid 1px #bbb;
+}
+.header-serach .form-group:first-child{
+	width:100%;
+}
+.header-serach .serach-dash-bn{
+	width:100%;
+	display:inline-block;
+}
+.profile-sec{
+	border-left:0;
+}
+.profile-sec{
+	padding-left:0;
+}
+/*body*/
+.email-notis{
+	flex-direction: column;
+}
+.new-disable .toggle-switch{
+	margin-left:51px;
+}
+.bottom-sec-part p{
+	width:auto;
+}
+/*business portfolio page*/
+.yes {
+	flex-direction: column;
+}
+.btn_upload{
+	position:relative;
+	margin:auto;
+	left:0;
+	right:0;
+}
+.video-link-sec{
+	width:100%;
+	margin-left:28px;
+}
+.facncy-box-sec{
+	flex-direction: column;
+	justify-content: center;
+    place-items: center;
+}
+.profile-one .comon-pro-div{
+	width:300px;
+	height:300px;
+}
+.profile-one .poftfoli-items{
+	width:300px;
+	height:300px;
+}
+/*client my project 2 page*/
+.new-comon-box3{
+	width:100%;
+}
+.left-width-sec .left-inside-text:first-child{
+	width:100%;
+	flex-direction: column;
+	justify-content: center;
+    place-items: center;
+	text-align:center;
+}
+.ads-pro1{
+	flex-direction: column;
+	justify-content: center;
+    place-items: center;
+}
+.common-projects1 {
+    flex-direction: column;
+	width:100%;
+	
+}
+.special-div-projects-one{
+	width:100%;
+	flex-direction: column;
+}
+.right-pro-1{
+	flex-direction: column;
+	justify-content: center;
+    place-items: center;
+}
+.left-width-sec {
+    flex-direction: column;
+	justify-content: center;
+    place-items: center;
+	width:100%;
+}
+.right-inside-text{
+	width:100%;
+}
+.right-inside-text .right-div{
+	margin:auto;
+}
+.common-sub-heading{
+	margin-left:0;
+}
+.common-sub-heading{
+	margin-right:0;
+}
+.top-sec-login, 
+.budget-text{
+	flex-direction: column;
+}
+.budget-text a{
+	width:100%;
+}
+/*business dashbord page*/
+.top-sec-dashbord {
+    flex-direction: column;
+}
+.inside-sec-div .table td, .table th{
+	padding-left:0;
+}
+.ongoing-div-sec{
+	width:100%;
+}
+.inside-sec-div .table td, .table th{
+	padding:4px 0;
+}
+/*business my projects page*/
+.indie-projects .dashbord-area{
+	    flex-direction: column;
+}
+.indie-projects .left-div ul{
+	position:relative;
+	left:0;
+	transform:none;
+}
+.left-div, .right-div{
+	width:100%;
+}
+.client-details{
+	flex-direction: column;
+	place-items: center;
+	text-align:center;
+}
+.clients-buttons {
+    flex-direction: column-reverse;
+}
+.indie-projects .right-div ul{
+	position:relative;
+	transform:none;
+}
+/*edit my event*/
+.new-businees-account-edit-apge .edit-myprofile{
+	width:100%;
+}
+.check-fild-option h5{
+	font-size: 16px;
+	font-weight:600;
+}
+.pic-upload-sec h3{
+	margin-top:0;
+}
+.pic-upload-sec{
+	padding:20px 0;
+}
+/*business my projects 2*/
+
+.special-div-projects-one{
+	 flex-direction: column;
+     width:100%;
+}
+/*client save items*/
+
+.item-list-save ul li:first-child:after {
+    right: -106%;
+}
+.item-list-save ul {
+    flex-direction: column;
+}
+
+}
