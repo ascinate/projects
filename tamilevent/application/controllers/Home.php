@@ -6,7 +6,7 @@
 
         public function __construct()
         {
-	          parent::__construct();
+	        parent::__construct();
 		      $this->load->database();
 		      $this->load->helper('url');
 		      $this->load->library('session');
@@ -27,12 +27,7 @@
           $this->load->view('front/home',$data);
           $this->load->view('front/includes/footer');
         }
-        public function signup()
-        {
-		  $this->load->view('front/includes/top-header');
-          $this->load->view('front/signup');
-          $this->load->view('front/includes/footer');
-        }
+        
         
 
         

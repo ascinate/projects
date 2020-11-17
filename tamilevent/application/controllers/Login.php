@@ -13,10 +13,6 @@
 		     // $this->load->model('home_model');
 
         }
-
-        
-        
-
         public function login_user()
 	 	{ 
 		  $email = $this->input->post('email');

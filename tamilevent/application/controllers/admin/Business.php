@@ -111,8 +111,11 @@
           $image =$_FILES['userfile']['name'];
           $photo_tmp =$_FILES['userfile']['tmp_name'];
           $dir = 'uploads';
+          $image2 =$_FILES['userfile2']['name'];
+          $photo_tmp2 =$_FILES['userfile2']['tmp_name'];
+          $dir2 = 'uploads';
 
-          if ($image!="") {
+          if ($image!="" && $image2!="") {
 
           move_uploaded_file($photo_tmp, $dir."/".$image);
            $data = array(
@@ -129,9 +132,8 @@
                 );
 
           }
-          $image2 =$_FILES['userfile2']['name'];
-          $photo_tmp2 =$_FILES['userfile2']['tmp_name'];
-          $dir2 = 'uploads';
+
+          
 
           if ($image2!="") {
 

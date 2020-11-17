@@ -85,15 +85,18 @@
 								<li><span>Completed</span></li>
 							</ul>
 						</div>
+          <form method="post" action="<?php echo base_url();?>signup/userinsert">
+
 						<fieldset class="wizard-fieldset show">
                              <h2 class="comon-header-text-d1">Join for good start. </h2>
                             <div class="row justify-content-center">
                                  <div class="col-md-12">
                                    
                                  </div>
+                                 
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="text" class="form-control wizard-required" id="fname" 
+                                        <input type="text" class="form-control wizard-required" name="first_name" id="fname" 
                                         placeholder="First name">
                                         <div class="wizard-form-error"></div>
                                     </div>
@@ -101,7 +104,7 @@
                                 <div class="col-md-6">
                                 
                                     <div class="form-group">
-                                        <input type="text" class="form-control wizard-required" id="fname"
+                                        <input type="text" class="form-control wizard-required" name="last_name" id="fname"
                                         placeholder="Last name">
                                         <div class="wizard-form-error"></div>
                                     </div>
@@ -109,7 +112,7 @@
                                 </div>
                                 <div class="col-md-12">
                                    <div class="form-group">
-                                      <input type="email" class="form-control wizard-required" id="fname"
+                                      <input type="email" class="form-control wizard-required" name="email" id="fname"
                                       placeholder="Email">
                                       <div class="wizard-form-error"></div>
                                    </div>
@@ -117,7 +120,7 @@
                                 
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="password" class="form-control wizard-required" id="fname" 
+                                        <input type="password" class="form-control wizard-required" name="password" id="fname" 
                                         placeholder="passwords">
                                         <div class="wizard-form-error"></div>
                                     </div>
@@ -134,16 +137,17 @@
                             <div class="row">
                                <div class="col-md-6">
                                   <div class="form-group">
-                                     <select class="form-control wizard-required" id="fname">
+                                     <select class="form-control wizard-required" id="fname" name="country">
                                         <option> Country </option>
-                                        <option> Country1 </option>
-                                        <option> Country2 </option>
-                                        <option> Country3 </option>
+                                        <option value="Country1"> Country1 </option>
+                                        <option value="Country2"> Country2 </option>
+                                        <option value="Country3"> Country3 </option>
                                      </select>
                                      <div class="wizard-form-error"></div>
                                   </div>
                                </div>
                             </div>
+
                             <div class="row">
                               <div class="radiostart">
                                  <h5> Start As:</h5>
@@ -172,107 +176,30 @@
                                            <div class="col-md-6">
                                               <div class="comon-div-checkbox">
                                                  <h5>Event type</h5>
+
+                                                 <?php foreach($events as $val) { ?>
+
                                                  <div class="form-check">
-                                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                                    <label class="form-check-label" for="exampleCheck1">Birthday</label>
+                                                    <input type="checkbox" name="event_type[]" class="form-check-input" id="exampleCheck1">
+                                                    <label class="form-check-label" for="exampleCheck1"><?=$val->event_name?></label>
                                                   </div>
-                                                  <div class="form-check">
-                                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                                    <label class="form-check-label" for="exampleCheck1">
-                                                      Civil Registartion
-                                                    </label>
-                                                  </div>
-                                                  <div class="form-check">
-                                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                                    <label class="form-check-label" for="exampleCheck1">
-                                                      Mehendi / Sangeeth
-                                                    </label>
-                                                  </div>
-                                                  <div class="form-check">
-                                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                                    <label class="form-check-label" for="exampleCheck1">
-                                                      Private Party
-                                                    </label>
-                                                  </div>
-                                                  <div class="form-check">
-                                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                                    <label class="form-check-label" for="exampleCheck1">
-                                                      Reception
-                                                    </label>
-                                                  </div>
-                                                  <div class="form-check">
-                                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                                    <label class="form-check-label" for="exampleCheck1">
-                                                      Saree Ceremony
-                                                    </label>
-                                                  </div>
-                                                  <div class="form-check">
-                                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                                    <label class="form-check-label" for="exampleCheck1">
-                                                      Wedding
-                                                    </label>
-                                                  </div>
-                                                  
+
+                                                  <?php } ?>
+                                              
                                               </div>
                                            </div>
                                            
                                            <div class="col-md-6">
                                               <div class="comon-div-checkbox">
                                                  <h5> Where do you provide your services ?</h5>
+                                                <?php foreach($country as $val){?>
+
                                                  <div class="form-check">
-                                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                                    <label class="form-check-label" for="exampleCheck1">
-                                                       Worldwide
+                                                    <input type="checkbox" name="location[]" class="form-check-input" id="exampleCheck1">
+                                                    <label class="form-check-label" for="exampleCheck1"><?=$val->country?>
                                                     </label>
                                                   </div>
-                                                  <div class="form-check">
-                                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                                    <label class="form-check-label" for="exampleCheck1">
-                                                      United Kingdom
-                                                    </label>
-                                                  </div>
-                                                  <div class="form-check">
-                                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                                    <label class="form-check-label" for="exampleCheck1">
-                                                      Europe
-                                                    </label>
-                                                  </div>
-                                                  <div class="form-check">
-                                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                                    <label class="form-check-label" for="exampleCheck1">
-                                                      Asia
-                                                    </label>
-                                                  </div>
-                                                  <div class="form-check">
-                                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                                    <label class="form-check-label" for="exampleCheck1">
-                                                      North America
-                                                    </label>
-                                                  </div>
-                                                  <div class="form-check">
-                                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                                    <label class="form-check-label" for="exampleCheck1">
-                                                      South America
-                                                    </label>
-                                                  </div>
-                                                  <div class="form-check">
-                                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                                    <label class="form-check-label" for="exampleCheck1">
-                                                      Africa
-                                                    </label>
-                                                  </div>
-                                                  <div class="form-check">
-                                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                                    <label class="form-check-label" for="exampleCheck1">
-                                                      Australia
-                                                    </label>
-                                                  </div>
-                                                  <div class="form-check">
-                                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                                    <label class="form-check-label" for="exampleCheck1">
-                                                      Africa
-                                                    </label>
-                                                  </div>
+                                                <?php }?>
                                                   
                                               </div>
                                            </div>
@@ -280,72 +207,14 @@
                                            <div class="col-md-6">
                                               <div class="comon-div-checkbox">
                                                  <h5> Services </h5>
+                                                 <?php foreach($services as $val){?>
                                                  <div class="form-check">
-                                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                                    <label class="form-check-label" for="exampleCheck1">
-                                                      Bar & Cocktails
+                                                    <input type="checkbox" name="services[]" class="form-check-input" id="exampleCheck1">
+                                                    <label class="form-check-label" for="exampleCheck1"><?=$val->services?>
                                                     </label>
                                                   </div>
-                                                  <div class="form-check">
-                                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                                    <label class="form-check-label" for="exampleCheck1">
-                                                      Cakes
-                                                    </label>
-                                                  </div>
-                                                  <div class="form-check">
-                                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                                    <label class="form-check-label" for="exampleCheck1">
-                                                      Catering
-                                                    </label>
-                                                  </div>
-                                                  <div class="form-check">
-                                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                                    <label class="form-check-label" for="exampleCheck1">
-                                                      Decoration
-                                                    </label>
-                                                  </div>
-                                                  <div class="form-check">
-                                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                                    <label class="form-check-label" for="exampleCheck1">
-                                                      DJ
-                                                    </label>
-                                                  </div>
-                                                  <div class="form-check">
-                                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                                    <label class="form-check-label" for="exampleCheck1">
-                                                      Entertainment
-                                                    </label>
-                                                  </div>
-                                                  <div class="form-check">
-                                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                                    <label class="form-check-label" for="exampleCheck1">
-                                                      Henna
-                                                    </label>
-                                                  </div>
-                                                  <div class="form-check">
-                                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                                    <label class="form-check-label" for="exampleCheck1">
-                                                      Make-up & hair
-                                                    </label>
-                                                  </div>
-                                                  <div class="form-check">
-                                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                                    <label class="form-check-label" for="exampleCheck1">
-                                                      Outfits
-                                                    </label>
-                                                  </div>
-                                                  <div class="form-check">
-                                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                                    <label class="form-check-label" for="exampleCheck1">
-                                                      Photography
-                                                    </label>
-                                                  </div>
-                                                  <div class="form-check">
-                                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                                    <label class="form-check-label" for="exampleCheck1">
-                                                      Transpotaion
-                                                    </label>
-                                                  </div>
+                                                <?php }?>
+                                               
                                                   
                                               </div>
                                            </div>
@@ -353,23 +222,20 @@
                                            <div class="col-md-6">
                                               <div class="comon-div-checkbox">
                                                  <h5> Rate </h5>
+                                                  <?php foreach($rates as $val){?>
                                                  <div class="form-check">
-                                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                                    <label class="form-check-label" for="exampleCheck1">£</label>
-                                                  </div>
-                                                  <div class="form-check">
-                                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                                  <input type="radio" name="rate" class="form-check-input" id="exampleCheck1">
                                                     <label class="form-check-label" for="exampleCheck1">
-                                                      ££
+                                                     <?php
+                                                      for($i=1;$i<=$val->rate;$i++)
+                                                      {
+                                                        echo "£";
+                                                      }
+                                                    ?>
                                                     </label>
                                                   </div>
-                                                  <div class="form-check">
-                                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                                    <label class="form-check-label" for="exampleCheck1">
-                                                      £££
-                                                    </label>
-                                                  </div>
-                                                  
+                                                  <?php }?>
+                                                 
                                               </div>
                                            </div>
                                            
@@ -392,9 +258,12 @@
                             
 							
 							<div class="form-group clearfix">
-								<a href="javascript:;" class="form-wizard-next-btn login-submit">Login</a>
+								<!--<input type="submit" name="submit" value="Signup"href="javascript:;" class="form-wizard-next-btn login-submit">-->
+                <input type="submit" name="submit" value="Signup" class="form-wizard-next-btn login-submit">
 							</div>
 						</fieldset>	
+          </form>
+          
 						<fieldset class="wizard-fieldset">
 							<h2 class="comon-header-text-d1"> you're almost threre! </h2>
                             

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 16, 2020 at 02:34 PM
+-- Generation Time: Nov 17, 2020 at 02:35 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 5.6.39
 
@@ -88,8 +88,13 @@ CREATE TABLE `country_list` (
 --
 
 INSERT INTO `country_list` (`id`, `country`) VALUES
-(11, 'uk'),
-(12, 'India');
+(13, 'United Kingdom'),
+(14, 'Europe'),
+(15, 'Asia'),
+(16, 'North America'),
+(17, 'South America'),
+(18, 'Africa'),
+(19, 'Australia');
 
 -- --------------------------------------------------------
 
@@ -109,7 +114,11 @@ CREATE TABLE `events_list` (
 INSERT INTO `events_list` (`id`, `event_name`) VALUES
 (4, 'birthday'),
 (6, 'Mehendi / Sangeeth'),
-(7, 'Private Party');
+(7, 'Private Party'),
+(8, 'Civil Registartion'),
+(9, 'Reception'),
+(10, 'Saree Ceremony'),
+(11, 'Wedding');
 
 -- --------------------------------------------------------
 
@@ -233,7 +242,7 @@ CREATE TABLE `project_master` (
 --
 
 INSERT INTO `project_master` (`id`, `user_id`, `job_title`, `category`, `project_expiry`, `project_dedline`, `project_type`, `project_price`, `project_details`, `project_location`, `country`) VALUES
-(8, 15, 'abc', 2, 'a', '2020', 'a', '1000', 'a', 'howrah', 'india'),
+(8, 30, 'xyz', 2, 'a', '2020', 'a', '1000', 'a', 'howrah', 'india'),
 (9, 27, 'abc', 7, 'abc', 'a', 'a', '1000', 'a', 'Kolkata', 'India');
 
 -- --------------------------------------------------------
@@ -252,7 +261,9 @@ CREATE TABLE `rate_list` (
 --
 
 INSERT INTO `rate_list` (`id`, `rate`) VALUES
-(8, '1');
+(8, '2'),
+(9, '3'),
+(10, '4');
 
 -- --------------------------------------------------------
 
@@ -271,7 +282,16 @@ CREATE TABLE `services_list` (
 
 INSERT INTO `services_list` (`id`, `services`) VALUES
 (6, 'Photography'),
-(7, 'Entertainment');
+(7, 'Entertainment'),
+(8, 'Transpotaion'),
+(9, 'Outfits'),
+(10, 'Make-up & hair'),
+(11, 'Henna'),
+(12, 'DJ'),
+(13, 'Decoration'),
+(14, 'Catering'),
+(15, 'Bar & Cocktails'),
+(16, 'Cakes');
 
 -- --------------------------------------------------------
 
@@ -299,6 +319,54 @@ INSERT INTO `supplier_portfolio` (`id`, `user_id`, `portfolio_img`, `caption`) V
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `user_assign_event_type`
+--
+
+CREATE TABLE `user_assign_event_type` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `event_type_id` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_assign_rate`
+--
+
+CREATE TABLE `user_assign_rate` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `rate_id` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_assign_services`
+--
+
+CREATE TABLE `user_assign_services` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `services_id` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_assign_service_location`
+--
+
+CREATE TABLE `user_assign_service_location` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `service_location_id` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `user_master`
 --
 
@@ -313,20 +381,23 @@ CREATE TABLE `user_master` (
   `portfolio_image` varchar(255) NOT NULL,
   `cover_image` varchar(255) NOT NULL,
   `description` text NOT NULL,
-  `other_description` text NOT NULL
+  `other_description` text NOT NULL,
+  `event_type` varchar(200) NOT NULL,
+  `locations` varchar(200) NOT NULL,
+  `services` varchar(200) NOT NULL,
+  `rate` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `user_master`
 --
 
-INSERT INTO `user_master` (`id`, `first_name`, `last_name`, `email`, `password`, `country`, `user_type`, `portfolio_image`, `cover_image`, `description`, `other_description`) VALUES
-(15, 'Baruiiiiiii', 'ss', 'ss@gmail.com', '', 'uk', 'Client', 'Jellyfish.jpg', 'Jellyfish.jpg', 'b', 'aa'),
-(27, 'Sumana Barui', 'barui', 'admin@gmail.com', '12', 'Uk', 'Business', 'Jellyfish.jpg', 'Koala.jpg', 'ab', 'aa'),
-(28, 'sumana', 'Sumanaa', 'admin@gmail.com', '122', 'india', 'Client', 'Jellyfish.jpg', 'Jellyfish.jpg', 'aa', 'aa'),
-(30, 'Sumana', 'Barui', 'a@gmail.com', '12', 'India', 'Business', 'Jellyfish.jpg', 'Koala.jpg', 'a', 'a'),
-(31, 'abc', 'abc', 'abc@gmail.com', '12', 'Uk', 'Business', 'Lighthouse.jpg', 'Lighthouse.jpg', 'a', 'a'),
-(32, 'xyz', 'xyz', 'xyz@gmail.com', '12', 'xyz', 'Business', 'Tulips.jpg', 'Tulips.jpg', 'aa', 'aa');
+INSERT INTO `user_master` (`id`, `first_name`, `last_name`, `email`, `password`, `country`, `user_type`, `portfolio_image`, `cover_image`, `description`, `other_description`, `event_type`, `locations`, `services`, `rate`) VALUES
+(27, 'Sumana', 'Barui', 'admin@gmail.com', '12', 'Uk', 'Business', 'Hydrangeas.jpg', 'Hydrangeas.jpg', 'abc', 'There is no secret. The reson why we are able to boast of happy clients in an exponentially\r\ncompetitive word is obvious. We like to challenge the way think about creativity, strive to provide creative solutions that stand out and have earned a reputation for thinking anew.', '', '', '', ''),
+(28, 'Sumana', 'Barui', 'admin@gmail.com', '122', 'india', 'Client', 'Jellyfish.jpg', 'avatar.jpg', 'aa', 'aa', '', '', '', ''),
+(30, 'Agra ', 'Creation', 'a@gmail.com', '12', 'India', 'Business', 'Tulips.jpg', 'Tulips.jpg', 'a', 'a', '', '', '', ''),
+(31, 'abc', 'xyz', 'abc@gmail.com', '12', 'Uk', 'Business', 'Lighthouse.jpg', 'Lighthouse.jpg', 'a', 'a', '', '', '', ''),
+(32, 'xyz', 'abc', 'xyz@gmail.com', '12', 'xyz', 'Business', 'Penguins.jpg', 'Penguins.jpg', 'aa', 'aa', '', '', '', '');
 
 --
 -- Indexes for dumped tables
@@ -405,6 +476,30 @@ ALTER TABLE `supplier_portfolio`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `user_assign_event_type`
+--
+ALTER TABLE `user_assign_event_type`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `user_assign_rate`
+--
+ALTER TABLE `user_assign_rate`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `user_assign_services`
+--
+ALTER TABLE `user_assign_services`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `user_assign_service_location`
+--
+ALTER TABLE `user_assign_service_location`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `user_master`
 --
 ALTER TABLE `user_master`
@@ -430,13 +525,13 @@ ALTER TABLE `category_master`
 -- AUTO_INCREMENT for table `country_list`
 --
 ALTER TABLE `country_list`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `events_list`
 --
 ALTER TABLE `events_list`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `event_master`
@@ -472,19 +567,43 @@ ALTER TABLE `project_master`
 -- AUTO_INCREMENT for table `rate_list`
 --
 ALTER TABLE `rate_list`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `services_list`
 --
 ALTER TABLE `services_list`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `supplier_portfolio`
 --
 ALTER TABLE `supplier_portfolio`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `user_assign_event_type`
+--
+ALTER TABLE `user_assign_event_type`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `user_assign_rate`
+--
+ALTER TABLE `user_assign_rate`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `user_assign_services`
+--
+ALTER TABLE `user_assign_services`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `user_assign_service_location`
+--
+ALTER TABLE `user_assign_service_location`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `user_master`

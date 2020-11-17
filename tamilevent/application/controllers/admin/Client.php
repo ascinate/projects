@@ -104,10 +104,14 @@
     public function update()
     {
 
-          $id=$this->uri->segment(4);
+         $id=$this->uri->segment(4);
           $image =$_FILES['userfile']['name'];
           $photo_tmp =$_FILES['userfile']['tmp_name'];
           $dir = 'uploads';
+
+          $image2 =$_FILES['userfile2']['name'];
+          $photo_tmp2 =$_FILES['userfile2']['tmp_name'];
+          $dir2 = 'uploads';
 
           if ($image!="") {
 
@@ -116,7 +120,6 @@
                   'description'=>$this->input->post('description'),
                   'other_description'=>$this->input->post('other_description'),
                   'portfolio_image'=>$image,
-                  'cover_image'=>$image2,
                   'first_name'=>$this->input->post('first_name'),
                   'last_name'=>$this->input->post('last_name'),
                   'password'=> $this->input->post('password'),
@@ -126,17 +129,12 @@
                 );
 
           }
-          $image2 =$_FILES['userfile2']['name'];
-          $photo_tmp2 =$_FILES['userfile2']['tmp_name'];
-          $dir2 = 'uploads';
-
           if ($image2!="") {
 
-          move_uploaded_file($photo_tmp2, $dir2."/".$image2);
+          move_uploaded_file($photo_tmp2, $dir."/".$image2);
            $data = array(
                   'description'=>$this->input->post('description'),
                   'other_description'=>$this->input->post('other_description'),
-                  'portfolio_image'=>$image,
                   'cover_image'=>$image2,
                   'first_name'=>$this->input->post('first_name'),
                   'last_name'=>$this->input->post('last_name'),
@@ -144,11 +142,11 @@
                   'email'=>$this->input->post('email'),
                   'country'=>$this->input->post('country'),
                   'user_type'=>$this->input->post('user_type')
-
-                  
-
                 );
+
           }
+
+          
           else{
              $data = array(
                   'description'=>$this->input->post('description'),
@@ -161,12 +159,10 @@
                   'user_type'=>$this->input->post('user_type'));
               }
             
-
-        $this->client_model->update($id,$data);
-        redirect('admin/client');
+            $this->client_model->update($id,$data);
+            redirect('admin/client');
 
     }
-
 
    }
    ?>

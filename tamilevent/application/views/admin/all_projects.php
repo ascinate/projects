@@ -34,7 +34,7 @@
                                             <div class="col-sm-10">
                                           
                                                 <?php 
-                                                $query=$this->db->get('user_master');
+                             $query=$this->db->query("select * from `user_master` ");
                                                 foreach($query->result() as $value)
                                                 {?>
                                                 <option value=""><?=$value->first_name?></option>

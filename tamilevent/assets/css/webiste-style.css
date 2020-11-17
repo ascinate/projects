@@ -793,6 +793,7 @@ footer{
 	display:inline-block;
 	width:532px;
 	height:250px;
+	overflow: hidden;
 }
 .user-picture{
 	width:60px;
@@ -802,6 +803,11 @@ footer{
 	overflow:hidden;
 	margin-top:10px;
 }
+.user-picture img{
+
+height: 100%;
+
+} 
 .user-fild{
 	display:flex;
 	justify-content: space-between;
